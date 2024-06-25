@@ -10,7 +10,7 @@ AOAI_KEY = "702a03df-3742-4136-bb82-c7b18b256ef5"
 MODEL_NAME = "gpt-35-turbo-16k"
 AZURE_SEARCH_KEY = AOAI_KEY
 AZURE_SEARCH_ENDPOINT = AOAI_ENDPOINT
-AZURE_SEARCH_INDEX = "margiestravel"
+RE_SEARCH_INDEX = "margiestravel"AZU
 
 
 # Set up the client for AI Chat
