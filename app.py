@@ -2,11 +2,15 @@ from flask import Flask, render_template, request
 from openai import AzureOpenAI
 from azure.search.documents import SearchClient
 from azure.core.credentials import AzureKeyCredential
-
+from dotenv import load_dotenv, find_dotenv
+import os
 
 # Put the keys and variables here (never put your real keys in the code)
 AOAI_ENDPOINT = "https://polite-ground-030dc3103.4.azurestaticapps.net/api/v1"
-AOAI_KEY = "702a03df-3742-4136-bb82-c7b18b256ef5"
+
+load_dotenv("/workspaces/demo-uts-workshop-app/azure_token.env")
+AOAI_KEY = os.getenv('AZURE_TOKEN')
+
 MODEL_NAME = "gpt-35-turbo-16k"
 AZURE_SEARCH_KEY = AOAI_KEY
 AZURE_SEARCH_ENDPOINT = AOAI_ENDPOINT
